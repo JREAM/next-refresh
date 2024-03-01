@@ -4,10 +4,7 @@ import { formatDateToLocal, formatCurrency } from '@/app/lib/utils';
 import { UpdateInvoice, DeleteInvoice } from '@/app/ui/invoices/buttons';
 import InvoiceStatus from '@/app/ui/invoices/status';
 
-export default async function InvoicesTable({
-  query,
-  currentPage,
-}: {
+export default async function InvoicesTable({ query, currentPage }: {
   query: string;
   currentPage: number;
 }) {

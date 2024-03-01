@@ -6,9 +6,7 @@ export const metadata: Metadata = {
   title: 'Customers',
 };
 
-export default async function Page({
-  searchParams,
-}: {
+export default async function Page({ searchParams }: {
   searchParams?: {
     query?: string;
     page?: string;

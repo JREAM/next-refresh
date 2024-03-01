@@ -1,8 +1,8 @@
-import CardWrapper from '@/app/ui/dashboard/cards';
-import RevenueChart from '@/app/ui/dashboard/revenue-chart';
-import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
-import { lusitana } from '@/app/ui/shared/fonts';
 import { Suspense } from 'react';
+import { lusitana } from '@/app/ui/shared/fonts';
+import CardWrapper from '@/app/ui/dashboard/cards';
+import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
+import RevenueChart from '@/app/ui/dashboard/revenue-chart';
 import {
   RevenueChartSkeleton,
   LatestInvoicesSkeleton,

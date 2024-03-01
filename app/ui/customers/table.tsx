@@ -4,7 +4,7 @@ import {
   FormattedCustomersTable,
 } from '@/app/lib/definitions';
 import { lusitana } from '@/app/ui/shared/fonts';
-import Search from '@/app/ui/search';
+import Search from '@/app/ui/shared/search';
 
 export default async function CustomersTable(
   {customers,}: {

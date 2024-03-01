@@ -6,6 +6,10 @@ import { z } from 'zod';
 import type { User } from '@/app/lib/definitions';
 import { authConfig } from './auth.config';
 
+import Facebook from "next-auth/providers/facebook"
+import GitHub from "next-auth/providers/github"
+import Google from "next-auth/providers/google"
+
 async function getUser(email: string): Promise<User | undefined> {
   try {
     const user = await sql<User>`SELECT * FROM users WHERE email=${email}`;
@@ -19,6 +23,18 @@ async function getUser(email: string): Promise<User | undefined> {
 export const { auth, signIn, signOut } = NextAuth({
   ...authConfig,
   providers: [
+    Google({
+      clientId: process.env.OAUTH_GOOGLE_ID,
+      clientSecret: process.env.OAUTH_GOOGLE_SECRET
+    }),
+    GitHub({
+      clientId: process.env.OAUTH_GITHUB_ID,
+      clientSecret: process.env.OAUTH_GITHUB_SECRET
+    }),
+    Facebook({
+      clientId: process.env.OAUTH_FACEBOOK_ID,
+      clientSecret: process.env.OAUTH_FACEBOOK_SECRET
+    }),
     Credentials({
       async authorize(credentials) {
         const parsedCredentials = z
