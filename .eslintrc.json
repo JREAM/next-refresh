@@ -1,3 +1,7 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "todo...": "eslint not running in vscode right now it seems, some option in settings",
+    "semi": ["error", "never"]
+  }
 }

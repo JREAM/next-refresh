@@ -1,14 +1,14 @@
 'use client';
+import { useFormState, useFormStatus } from 'react-dom';
 import Image from 'next/image';
-import { lusitana } from '@/app/ui/fonts';
+import { lusitana } from '@/app/ui/shared/fonts';
 import {
   AtSymbolIcon,
   KeyIcon,
   ExclamationCircleIcon,
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
-import { Button } from './button';
-import { useFormState, useFormStatus } from 'react-dom';
+import { Button } from '@/app/ui/shared/button';
 import { authenticate } from '@/app/lib/actions';
 
 export default function SignupForm() {
@@ -107,7 +107,7 @@ export default function SignupForm() {
           </div>
 
         </div>
-        <LoginButton />
+        <SignupButton />
                 <div
           className="flex h-8 items-end space-x-1"
           aria-live="polite"
@@ -125,10 +125,10 @@ export default function SignupForm() {
   );
 }
 
-function LoginButton() {
+function SignupButton() {
   return (
     <Button className="mt-4 w-full">
-      Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
+      Sign Up <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
     </Button>
   );
 }
