@@ -4,7 +4,7 @@ Refreshed on latest Next version w/app folder, very awesome. Vercel deployment p
 
 - TypeScript
 - NextJS
-- Postgres (Possibly Switch)
+- Postgres
 - Vercel Auto Deploy
 - Tailwind (Customize Later)
 - SSO

@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Pagination from '@/app/ui/shared/pagination';
 import Search from '@/app/ui/shared/search';
 import Table from '@/app/ui/invoices/table';
-import { CreateInvoice } from '@/app/ui/invoices/buttons';
+import { Create } from '@/app/ui/invoices/buttons';
 import { fetchInvoicesPages } from '@/app/lib/data';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { lusitana } from '@/app/ui/shared/fonts';
@@ -29,7 +29,9 @@ export default async function Page({ searchParams }: {
       </div>
       <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
         <Search placeholder="Search invoices..." />
-        <CreateInvoice />
+        <Create
+          uri='/dashboard/invoices/create'
+          text='Create' />
       </div>
       <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
         <Table query={query} currentPage={currentPage} />
